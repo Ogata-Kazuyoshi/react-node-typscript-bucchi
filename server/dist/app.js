@@ -15,9 +15,11 @@ const temp = {
     3: 300,
 };
 app.get('/data', (req, res) => {
+    req.query.city;
+    req.query;
     res.send(temp);
 });
-app.use(express_1.default.static('../public/index.html'));
+app.use(express_1.default.static('./dist/public/'));
 app.listen(3000, () => {
     console.log('server is runnign');
 });

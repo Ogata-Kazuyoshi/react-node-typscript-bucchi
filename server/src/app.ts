@@ -15,9 +15,12 @@ const temp = {
 };
 
 app.get('/data', (req: Request, res: Response) => {
+  req.query.city;
+  req.query;
   res.send(temp);
 });
-app.use(express.static('../public/index.html'));
+
+app.use(express.static('./dist/public/'));
 
 app.listen(3000, () => {
   console.log('server is runnign');
